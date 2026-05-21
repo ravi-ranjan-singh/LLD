@@ -13,6 +13,7 @@ class AmexCreditCard extends CreditCard implements RefundCompatibleCreditCard {
     cvv: number,
   ) {
     super(cardNumber, cardHolder, expiryDate, cvv);
+    // DIP
     this.refundStrategy = new WalletRefundStrategy();
   }
 
