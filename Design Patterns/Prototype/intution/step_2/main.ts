@@ -43,7 +43,13 @@ function main() {
   // The above code is vialoating OCP because tomorrow if we introduce a new email which inherits
   // from Email class we will have to come here and add a check for that as well
   // The main issue is The logic to create copy is written in the corresponding classes
-  //  but which logic to trigger is written in the driver class / main function.
+  // but which logic to trigger is written in the driver class / main function. The responsibility of which
+  // copy logic to call is given to driver class which is not very suitable
+
+  // Solution:
+  // Driver class or main function should not drive which logic to trigger, instead each class can expose
+  // a copy or clone method which give a new copy of the class using that object which solves this problem
+  // This called prototype design pattern
 }
 
 main();
