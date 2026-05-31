@@ -1,3 +1,5 @@
+import ATMState from "../enums/ATMState";
+
 interface State {
   initTransaction(): number;
 
@@ -8,6 +10,8 @@ interface State {
   ejectCard(): void;
 
   readCashWithdrawalDetails(transactionId: number, amount: number): boolean; // return true if cash withdrawal details are valid
+
+  getState(): ATMState;
 }
 
 export default State;

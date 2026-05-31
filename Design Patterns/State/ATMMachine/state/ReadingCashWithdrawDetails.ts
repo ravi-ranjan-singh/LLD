@@ -1,15 +1,28 @@
+import ATMState from "../enums/ATMState";
 import State from "./State";
 
 class ReadingCashWithdrawDetails implements State {
-  initTransaction(): number {}
+  initTransaction(): number {
+    return 0;
+  }
 
-  readCardDetailsAndPin(): boolean {}
+  readCardDetailsAndPin(): boolean {
+    return false;
+  }
 
-  readCashWithdrawalDetails(transactionId: number, amount: number): boolean {}
+  readCashWithdrawalDetails(transactionId: number, amount: number): boolean {
+    return false;
+  }
 
-  dispenseCash(transactionId: number): number {}
+  dispenseCash(transactionId: number): number {
+    return 0;
+  }
 
   ejectCard(): void {}
+
+  getState(): ATMState {
+    return ATMState.READY_FOR_TRANSACTION;
+  }
 }
 
 export default ReadingCashWithdrawDetails;
