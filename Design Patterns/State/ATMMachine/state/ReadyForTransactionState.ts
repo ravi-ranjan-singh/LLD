@@ -3,7 +3,7 @@ import ATMState from "../enums/ATMState";
 import ATM from "../models/ATM";
 import State from "./State";
 
-class ReadyForTransaction implements State {
+class ReadyForTransactionState implements State {
   private atm: ATM;
   private backendAPI: BackendAPI;
 
@@ -44,4 +44,4 @@ class ReadyForTransaction implements State {
   }
 }
 
-export default ReadyForTransaction;
+export default ReadyForTransactionState;
